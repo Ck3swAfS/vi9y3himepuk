@@ -1,6 +1,28 @@
 import { SparklesIcon } from '@heroicons/react/outline';
 import * as React from 'react';
 import Input from './Feed/Input';
+import Post from './Feed/Post';
+
+const posts = [
+  {
+    id: '1',
+    name: 'Anya',
+    username: 'kimera',
+    userImg: 'https://user-images.githubusercontent.com/107306723/174685258-972d42d7-67e1-433b-8260-1db588861da4.jpeg',
+    img: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80',
+    text: 'nice view!',
+    timestamp: '2 hours ago',
+  },
+  {
+    id: '2',
+    name: 'Anya',
+    username: 'kimera',
+    userImg: 'https://user-images.githubusercontent.com/107306723/174685258-972d42d7-67e1-433b-8260-1db588861da4.jpeg',
+    img: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80',
+    text: 'wow!',
+    timestamp: '2 days ago',
+  },
+];
 
 interface FeedProps {}
 
@@ -14,6 +36,9 @@ const Feed: React.FC<FeedProps> = () => {
         </div>
       </div>
       <Input />
+      {posts.map((post) => (
+        <Post key={post.id} post={post} />
+      ))}
     </div>
   );
 };
