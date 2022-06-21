@@ -1,5 +1,6 @@
 import { SparklesIcon } from '@heroicons/react/outline';
 import * as React from 'react';
+import Input from './Feed/Input';
 
 interface FeedProps {}
 
@@ -12,6 +13,7 @@ const Feed: React.FC<FeedProps> = () => {
           <SparklesIcon className='h-5' />
         </div>
       </div>
+      <Input />
     </div>
   );
 };
